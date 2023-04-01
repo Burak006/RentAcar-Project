@@ -1,0 +1,25 @@
+.cars_text{
+	/*border: 1px solid #000;*/
+	width: 315px;
+	height: 305px;
+	margin: auto;
+	color:#000;
+	font-size: 12px;
+	font-weight: 300;
+	font-style: normal;
+	overflow: scroll;
+    background-color: white;
+}
+.filter_text{
+	/*border: 1px solid #000;*/
+	width: 315px;
+	height: auto;
+	margin: auto;
+	color:#000;
+	font-size: 12px;
+	font-weight: 300;
+	font-style: normal;
+	overflow: scroll;
+}
+
+

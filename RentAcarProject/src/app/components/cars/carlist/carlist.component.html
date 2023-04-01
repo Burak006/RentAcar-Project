@@ -1,0 +1,68 @@
+<div class="form-group">
+  <input type="text" class="form-control" id="carSearch" placeholder="Marka Model Giriniz..." style="width: 500px; margin: auto; margin-top: 20px;" [(ngModel)]="filterText" />
+</div>
+
+  <div class="card">
+      <div class="table-responsive">
+        <table class="table align-items-center mb-0">
+          <thead>
+            <tr>
+              <th class="text-secondary opacity-7"></th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Seri</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Model</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Yıl</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">KM</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Renk</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fiyat</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">İlan Tarihi</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">İl/İlçe</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of carlist | carSearch: filterText">
+              <td>
+                <div class="d-flex px-2 py-1">
+                  <div>
+                    <img routerLink="details/{{data.id}}" src="{{data.imagePath}}" class="avatar avatar-sm me-3" style="cursor: pointer;">
+                  </div>
+                </div>
+              </td>
+              <td>
+                <p class="text-xs font-weight-bold mb-0">{{data.sherry}}</p>
+              </td>
+              <td>
+                  <p class="text-xs font-weight-bold mb-0">{{data.model}}</p>
+                </td>
+                <td>
+                  <p class="text-xs font-weight-bold mb-0">{{data.year}}</p>
+                </td>
+                <td>
+                  <p class="text-xs font-weight-bold mb-0">{{data.km}}</p>
+                </td>
+                <td>
+                  <p class="text-xs font-weight-bold mb-0">{{data.color}}</p>
+                </td>
+                <td>
+                  <p class="text-xs font-weight-bold mb-0">{{data.price}}</p>
+                </td>
+                <td>
+                  <p class="text-xs font-weight-bold mb-0">{{data.listing_date}}</p>
+                </td>
+                <td>
+                  <p class="text-xs font-weight-bold mb-0">   
+                   {{data.province}} / {{data.district}}
+                  </p>
+                </td>
+                <td>
+                  <p class="text-xs font-weight-bold mb-0">   
+                      <a routerLink="update/{{data.id}}"><img src="../../../assets/img/icons/update.png" style="width: 30px; height: 30px;"></a>
+                      &nbsp;
+                      <a (click)="delete(data)"><img src="../../../assets/img/icons/delete.png" style="width: 30px; height: 30px;"></a>
+                  </p>
+                </td>  
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

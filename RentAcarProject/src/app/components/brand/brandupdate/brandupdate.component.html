@@ -1,0 +1,26 @@
+<button routerLink="/admin/brands" type="button" class="btn bg-gradient-primary">GERİ</button>
+  <div style="text-align: center;">
+    <h5 class="title">Marka Ekle</h5>
+
+    <form [formGroup]="brandUpdateForm" *ngIf="brandUpdateForm">
+      <div class="row">
+        <div class="col-md-6" style="margin: auto;">
+      <div class="form-group">
+          <label for="example-text-input" class="form-control-label">Güncel Markayı Giriniz</label>
+          <input class="form-control" formControlName="name" type="text" value="Güncel Markayı Giriniz" id="example-text-input">
+
+          <label for="example-text-input" class="form-control-label">Güncel logosu</label>
+          <input class="form-control" formControlName="logo" type="text" value="Güncel Logosu" id="example-text-input">
+      </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-outline-primary" style="margin-right: 10px;" (click)="brandUpdate()">Güncelle</button>
+    </form>
+</div>
+ 
+   
+
+
+
+
+  

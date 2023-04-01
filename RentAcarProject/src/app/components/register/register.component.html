@@ -1,0 +1,119 @@
+
+<!-- Navbar Light -->
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+      RentAcarProject
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navigation">
+    
+      <ul class="navbar-nav navbar-nav-hover mx-auto">
+
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/" role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Anasayfa
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Araçlar
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/contact"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-expanded="false">
+        Contact
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/register"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Hesap Aç
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/login"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Giriş Yap
+        </a>
+        </li>
+        </ul>
+      
+        <ul class="navbar-nav d-lg-block d-none">
+        <li class="nav-item">
+        <a routerLink="/admin" class="btn btn-sm  btn-primary  mb-0 me-1">Ücretsiz İlan Ver</a>
+        </li>
+        </ul>
+
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+
+<!--register start-->
+    <section>
+      <div class="page-header min-vh-100">
+      <div class="container">
+      <div class="row">
+      <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+      <div class="card card-plain">
+      <div class="card-header pb-0 text-left">
+      <h4 class="font-weight-bolder">Sign Up</h4>
+      <p class="mb-0">Enter your email and password to register</p>
+      </div>
+      <div class="card-body pb-3">
+      <form role="form">
+      <label>Name</label>
+      <div class="mb-3">
+      <input type="text" class="form-control" formControlName="name" placeholder="Name" aria-label="Name">
+      </div>
+      <label>SurName</label>
+      <div class="mb-3">
+      <input type="text" class="form-control" formControlName="surname" placeholder="surname" aria-label="surname">
+      </div>
+      <label>Email</label>
+      <div class="mb-3">
+      <input type="email" class="form-control" formControlName="email" placeholder="Email" aria-label="Email">
+      </div>
+      <label>Password</label>
+      <div class="mb-3">
+      <input type="password" class="form-control" formControlName="pasword" placeholder="Password" aria-label="Password">
+      </div>
+      <div class="form-check form-check-info text-left">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked="">
+      <label class="form-check-label" for="flexCheckDefault">
+      I agree the <a href="../../../pages/privacy.html" class="text-dark font-weight-bolder">Terms and Conditions</a>
+      </label>
+      </div>
+      <div class="text-center">
+      <button (click)="userAdd()" type="button" class="btn btn-primary w-100 mt-4 mb-0">Kayıt Ol</button>
+      </div>
+      </form>
+      </div>
+      <div class="card-footer text-center pt-0 px-sm-4 px-1">
+      <p class="mb-4 mx-auto">
+      Already have an account?
+      <a routerLink="login" class="text-primary font-weight-bold">Giriş Yap</a>
+      </p>
+      </div>
+      </div>
+      </div>
+      <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+      <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-ill.jpg');
+                background-size: cover;">
+      <span class="mask bg-primary opacity-4"></span>
+      <h4 class="mt-5 text-white font-weight-bolder position-relative">Your journey starts here</h4>
+      <p class="text-white position-relative">Just as it takes a company to sustain a product, it takes a community to sustain a protocol.</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </section>
+<!--register end-->
+  

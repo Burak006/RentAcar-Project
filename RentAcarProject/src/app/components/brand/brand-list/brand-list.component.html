@@ -1,0 +1,41 @@
+<input type="text" class="form-control"id="brandSearch" style="margin-top: 20px; margin: auto; width: 500px;" placeholder="Aradığınız Markayı Giriniz..." [(ngModel)]="filterText" />
+
+    <div class="card">
+      <div class="table-responsive">
+        <table class="table align-items-center mb-0">
+          <thead>
+            <tr>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Logo</th>
+              <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Marka</th>
+              <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ayarlar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of brands | brandSearch: filterText">
+              <td>
+                <div class="d-flex px-2 py-1">
+                  <div>
+                    <img src="{{ data.logo }}" class="avatar avatar-sm me-3">
+                  </div>
+
+                </div>
+              </td>
+              <td>
+                <p class="text-xs font-weight-bold mb-0">
+                  {{ data.name }}
+                </p>
+              </td>
+             
+              <td class="align-middle text-center">
+                <span class="text-secondary text-xs font-weight-bold">
+                  <a routerLink="update/{{ data.id }}"><img src="../../../assets/img/icons/update.png" style="width: 30px; height: 30px;"></a>
+                      &nbsp;
+                      <a (click)="delete(data)"><img src="../../../assets/img/icons/delete.png" style="width: 30px; height: 30px;"></a>
+                </span>
+              </td>
+              
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

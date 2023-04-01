@@ -1,0 +1,229 @@
+
+<button routerLink="/admin/cars" type="button" class="btn bg-gradient-primary">GERİ</button>
+<form [formGroup]="carsUpdateForm" *ngIf="createCarsFrom">
+    <div class="row">
+      <div class="col-md-6">
+    <div class="form-group">
+        <label for="example-text-input" class="form-control-label">İlan Başlığı</label>
+        <input class="form-control" formControlName="advert_title" type="text" value="İlan Başlığı" id="example-text-input">
+    </div>
+      </div>
+      <div class="col-md-6">
+    <div class="form-group">
+        <label for="example-search-input" class="form-control-label">Fiyat</label>
+        <input class="form-control" formControlName="price" type="text" value="Fiyat" id="example-text-input">
+    </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Araç Markası</label>
+      <input class="form-control" formControlName="carname" type="text" value="Araç Markası" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Marka Numarası</label>
+      <input class="form-control" formControlName="brandId" type="text" value="Marka Numarası" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Yılı</label>
+      <input class="form-control" formControlName="year" type="text" value="Yılı" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Renk</label>
+      <input class="form-control" formControlName="color" type="text" value="Renk" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Renk Numarası</label>
+      <input class="form-control" formControlName="colorId" type="text" value="Renk Numarası" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Seri</label>
+      <input class="form-control" formControlName="sherry" type="text" value="Seri" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Araç Resim</label>
+      <input class="form-control" formControlName="imagePath" type="text" value="Araç Resim" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Detay Resim-1</label>
+      <input class="form-control" formControlName="image_1" type="text" value="Detay Resim-1" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Detay Resim-2</label>
+      <input class="form-control" formControlName="image_2" type="text" value="Detay Resim-2" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Detay Resim-3</label>
+      <input class="form-control" formControlName="image_3" type="text" value="Detay Resim-3" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">İL</label>
+      <input class="form-control" formControlName="province" type="text" value="İL" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">İlçe</label>
+      <input class="form-control" formControlName="district" type="text" value="İlçe" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Model</label>
+      <input class="form-control" formControlName="model" type="text" value="Model" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Yakıt</label>
+      <input class="form-control" formControlName="fuel" type="text" value="Yakıt" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Vites</label>
+      <input class="form-control" formControlName="gear" type="text" value="Vites" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Araç Durumu</label>
+      <input class="form-control" formControlName="vehicle_status" type="text" value="Araç Durumu" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">KM</label>
+      <input class="form-control" formControlName="km" type="text" value="KM" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Kasa Tipi</label>
+      <input class="form-control" formControlName="case_type" type="text" value="Kasa Tipi" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Motor Gücü</label>
+      <input class="form-control" formControlName="motor_power" type="text" value="Motor Gücü" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Motor Hacmi</label>
+      <input class="form-control" formControlName="engine_capacity" type="text" value="Motor Hacmi" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Çekiş</label>
+      <input class="form-control" formControlName="traction" type="text" value="Çekiş" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Garanti</label>
+      <input class="form-control" formControlName="guarantee" type="text" value="Garanti" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Ağır Hasar Kayıtlı</label>
+      <input class="form-control" formControlName="damage_registered" type="text" value="Ağır Hasar Kayıtlı" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Plaka/Uyruk</label>
+      <input class="form-control" formControlName="number_plate" type="text" value="Plaka/Uyruk" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Kimden</label>
+      <input class="form-control" formControlName="from_who" type="text" value="Kimden" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">Görüntülü Arama</label>
+      <input class="form-control" formControlName="video_call" type="text" value="Görüntülü Arama" id="example-text-input">
+  </div>
+  </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-text-input" class="form-control-label">Takas</label>
+      <input class="form-control" formControlName="swap" type="text" value="Takas" id="example-text-input">
+  </div>
+    </div>
+    <div class="col-md-6">
+  <div class="form-group">
+      <label for="example-search-input" class="form-control-label">İlan Tarihi</label>
+      <input class="form-control" formControlName="listing_date" type="text" value="İlan Tarihi" id="example-text-input">
+  </div>
+  </div>
+  </div> 
+  <button class="btn btn-fill btn-primary" (click)="carsUpdate()">Güncelle</button>
+  </form>

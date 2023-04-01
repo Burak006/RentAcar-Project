@@ -1,0 +1,232 @@
+
+<div class="col-md-3"></div>
+<input type="text" class="form-control"id="brandSearch" style="margin-top: 20px;" placeholder="Aradığınız Markayı Giriniz..." [(ngModel)]="filterText" />
+
+<a href="#" class="list-group-item text-center" style="color: black;">Otomobil</a>
+<div class="cars_text">
+  <ul class="list-group mt-3">
+    <li class="list-group-item" style="cursor: pointer; padding: 13px;" *ngFor="let data of brands | brandSearch: filterText">
+
+      <span (click)="selectBrands(data)" routerLink="brands/{{ data.id }}" >{{ data.name }}</span>
+      
+          <!--<button (click)="delete(data)" type="button" class="btn-close" aria-label="Close" style="float: right;"></button>
+          <button routerLink="/brandupdate/{{ data.id }}" type="button" class="btn btn-secondary" style="float: right;">Güncelle</button>-->
+       
+        </li>
+  </ul>
+</div>
+
+<div style="clear: both;"></div>
+<span class="col-md-3" style="color: black; margin-left: 120px;">Filitrele</span>
+<div class="filter_text">
+<div class="accordion" id="accordionPanelsStayOpenExample">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Adres
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        <select id="inputState" class="form-select">
+          <option selected>İl</option>
+          <option *ngFor="let data of provinces">{{data.name}}</option>
+        </select>
+        <br>
+        <select id="inputState" class="form-select">
+          <option selected>İlçe</option>
+          <option *ngFor="let data of districts">{{data.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Renk
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+
+        <div class="form-check" *ngFor="let data of colors" >
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label" for="flexCheckDefault" >
+            <li (click)="selectcolors(data)" class="dropdown-item" aria-current="true" routerLink="colors/{{ data.id }}">
+                {{data.name}}
+            </li>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Yıl
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <input class="form-control" style="width: 65px; float: left; margin-right: 120px;" placeholder="min">
+        <input class="form-control" style="width: 65px;" placeholder="max">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Yakıt & Vites
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+
+        <label>Yakıt</label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Benzin
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Benzin & LPG
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Dizel
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Hybrid
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Elektirik
+          </label>
+        </div>
+
+        <label>Vites</label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Manuel
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Otomatik
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Fiyat
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+
+        <span class="input-group-text" style="width: 40px; float: left;">$</span>
+        <input type="text" style="width: 160px; float: left;" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text" style="width: 50px;">.00</span>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Kasa Tipi
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Cabrio
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Coupe
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Coupe 4 Kapı
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Hatchback 3 kapı
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Hatchback 5 kapı
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Sedan
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Station Wagon
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            MPV
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Roadster
+          </label>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

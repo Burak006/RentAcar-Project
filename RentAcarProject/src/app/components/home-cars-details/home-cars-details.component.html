@@ -1,0 +1,339 @@
+<div class="card">
+    <div class="card-body">
+      <button routerLink="/" type="button" class="btn bg-gradient-primary">GERİ</button>
+    <h5 class="mb-4">Araç Detayı</h5>
+    <div class="row">
+    <div class="col-xl-5 col-lg-6 text-center">
+    <img class="w-100 border-radius-lg shadow-lg mx-auto" src="{{detail.image_1}}" alt="chair">
+    <div class="my-gallery d-flex mt-4 pt-2" itemscope="" itemtype="http://schema.org/ImageGallery" data-pswp-uid="1">
+    <figure class="ms-2 me-3" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+    <a itemprop="contentUrl" data-size="500x600">
+    <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{{detail.image_1}}" alt="Image description">
+    </a>
+    </figure>
+    <figure class="me-3" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+    <a itemprop="contentUrl" data-size="500x600">
+    <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{{detail.image_2}}" itemprop="thumbnail" alt="Image description">
+    </a>
+    </figure>
+    <figure class="me-3" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+    <a itemprop="contentUrl" data-size="500x600">
+    <img class="w-100 min-height-100 max-height-100 border-radius-lg shadow" src="{{detail.image_3}}" itemprop="thumbnail" alt="Image description">
+    </a>
+    </figure>
+    </div>
+    
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" >
+    
+    <div class="pswp__bg" ></div>
+    
+    <div class="pswp__scroll-wrap">
+    
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-5 mx-auto">
+    <h3 class="mt-lg-0 mt-4">Araç Bilgileri</h3>
+    
+    <div class="table table-responsive">
+    <table class="table align-items-center mb-0">
+    <thead></thead>
+    <tbody>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">{{detail.advert_title}}</h6>
+    </div>
+    </div>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Fiyat= {{detail.price}}</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.province}} / {{detail.district}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">İlan Tarihi</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.listing_date}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Marka</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.carname}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Model</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.model}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Seri</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.sherry}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Yıl</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.year}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Yakıt</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.fuel}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Vites</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.gear}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">KM</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.km}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Kasa Tipi</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.case_type}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Motor Gücü</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.motor_power}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Motor Hacmi</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.engine_capacity}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Çekiş</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.traction}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Renk</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.color}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Garanti</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.guarantee}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Ağır Hasar Kayıtlı</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.damage_registered}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Plaka/Uyruk</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.number_plate}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Kimden</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.from_who}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Görüntülü Arama</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.video_call}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Takas</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.swap}}</p>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-1">
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Araç Durumu</h6>
+    </div>
+    </div>
+    </td>
+    <td>
+    <p class="text-sm text-secondary mb-0">{{detail.vehicle_status}}</p>
+    </td>
+    </tr>
+    
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    

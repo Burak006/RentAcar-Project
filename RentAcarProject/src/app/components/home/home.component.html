@@ -1,0 +1,502 @@
+<!-- Navbar Light -->
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+      RentAcarProject
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navigation">
+    
+      <ul class="navbar-nav navbar-nav-hover mx-auto">
+
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/" role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Anasayfa
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Araçlar
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/contact"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-expanded="false">
+        Contact
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/register"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Hesap Aç
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/login"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Giriş Yap
+        </a>
+        </li>
+        </ul>
+      
+        <ul class="navbar-nav d-lg-block d-none">
+        <li class="nav-item">
+        <a routerLink="/admin" class="btn btn-sm  btn-primary  mb-0 me-1">Ücretsiz İlan Ver</a>
+        </li>
+        </ul>
+
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+  
+<br>
+<div style="clear: both;"></div>
+
+<!---carlist start-->
+<div class="col-md-12">
+
+    <div class="form-group">
+        <input type="text" class="form-control" id="carSearch" placeholder="Marka Model Giriniz..." style="width: 500px; margin: auto;" [(ngModel)]="filterText" />
+      </div>
+      
+        <div class="card">
+            <div class="table-responsive">
+              <table class="table align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-secondary opacity-7"></th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Seri</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Model</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">İlan Başlığı</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Yıl</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">KM</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Renk</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fiyat</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">İlan Tarihi</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">İl/İlçe</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let x of carlist | carSearch: filterText">
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img routerLink="home/cars/details/{{x.id}}" src="{{x.imagePath}}" class="avatar avatar-sm me-3" style="cursor: pointer;">
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">{{x.sherry}}</p>
+                    </td>
+                    <td>
+                        <p class="text-xs font-weight-bold mb-0">{{x.model}}</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{x.advert_title}}</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{x.year}}</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{x.km}}</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{x.color}}</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{x.price}}</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">{{x.listing_date}}</p>
+                      </td>
+                      <td>
+                        <p class="text-xs font-weight-bold mb-0">   
+                         {{x.province}} / {{x.district}}
+                        </p>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    
+<!---carlist end-->
+
+<br>
+
+<!--image start-->
+<div class="row">
+  <div class="col-lg-7 mb-4 mb-lg-0">
+    <div class="card">
+      <div class="card-header d-flex pb-0 p-3">
+      <h6 class="my-auto">Passat</h6>
+      <div class="nav-wrapper position-relative ms-auto w-50">
+      <ul class="nav nav-pills nav-fill p-1" role="tablist">
+      <li class="nav-item" role="presentation">
+      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">
+      Beyaz
+      </a>
+      </li>
+      <li class="nav-item" role="presentation">
+      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#cam2" role="tab" aria-controls="cam2" aria-selected="false" tabindex="-1">
+      Gri
+      </a>
+      </li>
+      <li class="nav-item" role="presentation">
+      <a class="nav-link mb-0 px-0 py-1" data-bs-toggle="tab" href="#cam3" role="tab" aria-controls="cam3" aria-selected="false" tabindex="-1">
+      Mavi
+      </a>
+      </li>
+      <div class="moving-tab position-absolute nav-link" style="padding: 0px; transition: all 0.5s ease 0s; transform: translate3d(0px, 0px, 0px); width: 132px;"><a class="nav-link mb-0 px-0 py-1 active" data-bs-toggle="tab" href="#cam1" role="tab" aria-controls="cam1" aria-selected="true">-</a></div></ul>
+      </div>
+      <div class="dropdown pt-2">
+      <a href="javascript:;" class="text-secondary ps-4" id="dropdownCam" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end me-sm-n4 px-2 py-3" aria-labelledby="dropdownCam">
+      <li><a class="dropdown-item border-radius-md" href="javascript:;">Pause</a></li>
+      <li><a class="dropdown-item border-radius-md" href="javascript:;">Stop</a></li>
+      <li><a class="dropdown-item border-radius-md" href="javascript:;">Schedule</a></li>
+      <li>
+      <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item border-radius-md text-danger" href="javascript:;">Remove</a></li>
+      </ul>
+      </div>
+      </div>
+      <div class="card-body p-3 mt-2">
+      <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show position-relative active height-400 border-radius-lg" id="cam1" role="tabpanel" aria-labelledby="cam1" style="background-image: url('../../../assets/img/volkswagen/passat.jpg'); background-size:cover;">
+      <div class="position-absolute d-flex top-0 w-100">
+      <p class="text-white p-3 mb-0">17.05.2021 4:34PM</p>
+      <div class="ms-auto p-3">
+      <span class="badge badge-secondary">
+      <i class="fas fa-dot-circle text-danger" aria-hidden="true"></i>
+      Recording</span>
+      </div>
+      </div>
+      </div>
+      <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam2" role="tabpanel" aria-labelledby="cam2" style="background-image: url('../../../assets/img/volkswagen/passat1.jpg'); background-size:cover;">
+      <div class="position-absolute d-flex top-0 w-100">
+      <p class="text-white p-3 mb-0">17.05.2021 4:35PM</p>
+      <div class="ms-auto p-3">
+      <span class="badge badge-secondary">
+      <i class="fas fa-dot-circle text-danger" aria-hidden="true"></i>
+      Recording</span>
+      </div>
+      </div>
+      </div>
+      <div class="tab-pane fade position-relative height-400 border-radius-lg" id="cam3" role="tabpanel" aria-labelledby="cam3" style="background-image: url('../../../assets/img/volkswagen/passat3.jpg'); background-size:cover;">
+      <div class="position-absolute d-flex top-0 w-100">
+      <p class="text-white p-3 mb-0">17.05.2021 4:57PM</p>
+      <div class="ms-auto p-3">
+      <span class="badge badge-secondary">
+      <i class="fas fa-dot-circle text-danger" aria-hidden="true"></i>
+      Recording</span>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+  </div>
+  <div class="col-lg-5">
+  <div class="card card-carousel overflow-hidden h-100 p-0">
+  <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
+  <div class="carousel-inner border-radius-lg h-100">
+  <div class="carousel-item h-100" style="background-image: url('../../../assets/img/audi/audi.jpg');
+        background-size: cover;">
+  <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
+  <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
+  <i class="ni ni-camera-compact text-dark opacity-10"></i>
+  </div>
+  <h5 class="text-white mb-1">Yeni Seri Audi</h5>
+  <p>Eşsiz tasarımıyla Audi Yeni Fırsatlarla Bayilerimizde...</p>
+  </div>
+  </div>
+  <div class="carousel-item h-100 active" style="background-image: url('../../../assets/img/audi/audi1.jpg');
+        background-size: cover;">
+  <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
+  <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
+  <i class="ni ni-bulb-61 text-dark opacity-10"></i>
+  </div>
+  <h5 class="text-white mb-1">Kusursuz Tasarım</h5>
+  <p>Kullanıcı Dostu ve Hoş İç Tasarımıyla Sizleri Bekliyor.</p>
+  </div>
+  </div>
+  <div class="carousel-item h-100" style="background-image: url('../../../assets/img/audi/audi2.jpg');
+        background-size: cover;">
+  <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
+  <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
+  <i class="ni ni-trophy text-dark opacity-10"></i>
+  </div>
+  <h5 class="text-white mb-1">Mavini Eşsiz Tonuyla</h5>
+  <p>Sınırlı Sayıda StoklardA...</p>
+  </div>
+  </div>
+  </div>
+  <button class="carousel-control-prev w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+  </button>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!--image end-->
+
+    <br>
+
+ <!--card start-->
+<div class="row mt-4">
+    <div class="col-lg-6 ms-auto">
+    <div class="card">
+    <div class="card-header pb-0 p-3">
+    <div class="d-flex align-items-center">
+    <h6 class="mb-0">TOGG</h6>
+    <button type="button" class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center ms-auto" data-bs-toggle="tooltip" data-bs-placement="bottom">
+    <i class="fas fa-info" aria-hidden="true"></i>
+    </button>
+    </div>
+    </div>
+    <div class="card-body p-3">
+    <div class="row">
+    <div class="col-5 text-center">
+    <div class="chart">
+    <img src="../../../assets/img/togg/togg.jpg" height="197" width="186" style="display: block; box-sizing: border-box; height: 197px; width: 186.4px;">
+    </div>
+
+   
+    </div>
+    <div class="col-7">
+    <div class="table-responsive">
+    <table class="table align-items-center mb-0">
+    <tbody>
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-0">
+    <span class="badge bg-primary me-3"> </span>
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Motor</h6>
+    </div>
+    </div>
+    </td>
+    <td class="align-middle text-center text-sm">
+    <span class="text-xs font-weight-bold"> Her motor 150 kW (200 bhp) elektrikli</span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-0">
+    <span class="badge bg-secondary me-3"> </span>
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Maksimim Hız</h6>
+    </div>
+    </div>
+    </td>
+    <td class="align-middle text-center text-sm">
+    <span class="text-xs font-weight-bold"> 220 km/sa </span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-0">
+    <span class="badge bg-info me-3"> </span>
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">0-100 km/h</h6>
+    </div>
+    </div>
+    </td>
+    <td class="align-middle text-center text-sm">
+    <span class="text-xs font-weight-bold"> 4,8 saniye (iki motor),
+        7,6 saniye (bir motor) </span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-0">
+    <span class="badge bg-success me-3"> </span>
+    <div class="d-flex flex-column justify-content-center">
+     <h6 class="mb-0 text-sm">Yakıt sistemi</h6>
+    </div>
+    </div>
+    </td>
+    <td class="align-middle text-center text-sm">
+    <span class="text-xs font-weight-bold"> Lityum iyon pil </span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <div class="d-flex px-2 py-0">
+    <span class="badge bg-warning me-3"> </span>
+    <div class="d-flex flex-column justify-content-center">
+    <h6 class="mb-0 text-sm">Yakıt sarfiyatı</h6>
+    </div>
+    </div>
+    </td>
+    <td class="align-middle text-center text-sm">
+    <span class="text-xs font-weight-bold"> 300 km ve 500 km menzil </span>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-6 mt-lg-0 mt-4">
+        <div class="card">
+        <div class="card-header pb-0 p-3">
+        <div class="d-flex align-items-center">
+        <h6 class="mb-0">Tesla</h6>
+        <button type="button" class="btn btn-icon-only btn-rounded btn-outline-secondary mb-0 ms-2 btn-sm d-flex align-items-center justify-content-center ms-auto" data-bs-toggle="tooltip" data-bs-placement="bottom">
+        <i class="fas fa-info" aria-hidden="true"></i>
+        </button>
+        </div>
+        </div>
+        <div class="card-body p-3">
+        <div class="row">
+        <div class="col-5 text-center">
+        <div class="chart">
+        <img src="../../../assets/img/togg/toggsedan.jpg" height="197" width="186" style="display: block; box-sizing: border-box; height: 197px; width: 186.4px;">
+        </div>
+    
+       
+        </div>
+        <div class="col-7">
+        <div class="table-responsive">
+        <table class="table align-items-center mb-0">
+        <tbody>
+        <tr>
+        <td>
+        <div class="d-flex px-2 py-0">
+        <span class="badge bg-primary me-3"> </span>
+        <div class="d-flex flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">Motor</h6>
+        </div>
+        </div>
+        </td>
+        <td class="align-middle text-center text-sm">
+        <span class="text-xs font-weight-bold"> 400 HP (294 kW)</span>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="d-flex px-2 py-0">
+        <span class="badge bg-secondary me-3"> </span>
+        <div class="d-flex flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">Maksimim Hız</h6>
+        </div>
+        </div>
+        </td>
+        <td class="align-middle text-center text-sm">
+        <span class="text-xs font-weight-bold"> 220 km/sa </span>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="d-flex px-2 py-0">
+        <span class="badge bg-info me-3"> </span>
+        <div class="d-flex flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">0-100 km/h</h6>
+        </div>
+        </div>
+        </td>
+        <td class="align-middle text-center text-sm">
+        <span class="text-xs font-weight-bold"> 4,3 saniye (iki motor),
+            7,3 saniye (bir motor) </span>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="d-flex px-2 py-0">
+        <span class="badge bg-success me-3"> </span>
+        <div class="d-flex flex-column justify-content-center">
+         <h6 class="mb-0 text-sm">Yakıt sistemi</h6>
+        </div>
+        </div>
+        </td>
+        <td class="align-middle text-center text-sm">
+        <span class="text-xs font-weight-bold"> Lityum iyon pil </span>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <div class="d-flex px-2 py-0">
+        <span class="badge bg-warning me-3"> </span>
+        <div class="d-flex flex-column justify-content-center">
+        <h6 class="mb-0 text-sm">Yakıt sarfiyatı</h6>
+        </div>
+        </div>
+        </td>
+        <td class="align-middle text-center text-sm">
+        <span class="text-xs font-weight-bold"> 300 km ve 500 km menzil </span>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+ <!--card end-->
+<br>
+<!--footer start-->
+    <footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                İle Yapılmıştır <i class="fa fa-heart"></i> by
+                <a href="#" class="font-weight-bold" target="_blank">Burak_Ergin</a>
+                Daha iyi bir web için.
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-muted" target="_blank">Hazırlayan Tim</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-muted" target="_blank">Hakkımızda</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-muted" target="_blank">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link pe-0 text-muted" target="_blank">Lisans</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+<!--footer end-->
+    
+
+    
+
+
+
+
+
+

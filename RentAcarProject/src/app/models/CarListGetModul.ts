@@ -1,0 +1,36 @@
+
+export interface CarListGetModul {
+    id:number;
+    brandId:number;
+    colorId:number;
+    carname:string;
+    sherry:string;
+    advert_title:string;
+    km:number;
+    price:number;
+    listing_date:string;
+    province:string;
+    district:string;
+    fuel:string;
+    gear:string;
+    vehicle_status:string;
+    case_type:string;
+    motor_power:string;
+    engine_capacity:string;
+    traction:string;
+    guarantee:string;
+    damage_registered:string;
+    number_plate:string;
+    from_who:string;
+    video_call:string;
+    swap:string;
+    model:string;
+    year:number;
+    color:string;
+    state:number;
+    description:string;
+    imagePath:string;
+    image_1:string;
+    image_2:string;
+    image_3:string;
+}

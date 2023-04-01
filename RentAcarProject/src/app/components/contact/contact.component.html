@@ -1,0 +1,81 @@
+<!-- Navbar Light -->
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+      RentAcarProject
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navigation">
+    
+      <ul class="navbar-nav navbar-nav-hover mx-auto">
+
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/" role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Anasayfa
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Araçlar
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/contact"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-expanded="false">
+        Contact
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/register"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Hesap Aç
+        </a>
+        </li>
+      
+        <li class="nav-item dropdown dropdown-hover mx-2">
+        <a routerLink="/login"  class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center " aria-expanded="false">
+        Giriş Yap
+        </a>
+        </li>
+        </ul>
+      
+        <ul class="navbar-nav d-lg-block d-none">
+        <li class="nav-item">
+        <a routerLink="/admin" class="btn btn-sm  btn-primary  mb-0 me-1">Ücretsiz İlan Ver</a>
+        </li>
+        </ul>
+
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->
+<div class="row">
+    <button routerLink="/" type="button" class="btn bg-gradient-warning">Çıkış</button>
+    <div class="col-md-6" style="margin: auto; padding: 20px 20px 20px 20px; color: black;">
+
+<div class="form-group">
+    <label for="example-text-input" class="form-control-label">İsim</label>
+    <input class="form-control" type="name" value="İsim" id="example-text-input">
+</div>
+<div class="form-group">
+    <label for="example-email-input" class="form-control-label">Email</label>
+    <input class="form-control" type="email" value="email" id="example-email-input">
+</div>
+<div class="form-group">
+    <label for="example-tel-input" class="form-control-label">Telefon</label>
+    <input class="form-control" type="tel" value="90-(***)-***-** **" id="example-tel-input">
+</div>
+
+<div class="form-group">
+    <div class="input-group">
+      <span class="input-group-text">Mesajınızı Yazın</span>
+      <textarea class="form-control" aria-label="With textarea"></textarea>
+    </div>
+</div>
+<button class="btn bg-gradient-primary mb-0" onclick="argon.showSwal('success-message')">Mesaj Gönder</button>
+</div>
+</div>

@@ -1,0 +1,14 @@
+.category_yazi_ana{
+	/*border: 1px solid #000;*/
+	width: 315px;
+	height: 150px;
+	margin: auto;
+	color:#000;
+	font-size: 15px;
+	font-weight: 300;
+	font-style: normal;
+	overflow: scroll;
+	margin-top: 30px;
+	margin-bottom: 50px;
+    background-color: white;
+}
