@@ -3,7 +3,7 @@
 <h1>Kullanılan Teknolojiler</h1>
 <h4>Angular - TypeScript - JavaScript - Api.Json - HTML 5 - Css 3 - Bootstrap 5<h/4>
 <h1>Home Page</h1>
-<img src="">
+<img src="https://user-images.githubusercontent.com/116731704/229294309-00002d3c-7b65-4d8e-bb0f-0bb0e1c31011.gif">
 
 <h1>Admin Page</h1>
 <img src="">
